@@ -1,0 +1,95 @@
+<div id="search-teacher">
+    <div id="caption">
+        <p>Enter the name of the teacher you want to search</p>
+    </div>
+    <div id="search">
+        <input type="text" name="search" id="search-bar" #search (change) = "getName(search.value)" placeholder="Enter the Teacher Name...">
+        <div>
+            <button class="btn" (click) = "doSearch()">Search</button>
+        </div>
+    </div>
+    <div id="searched-list">
+        <table id="search-table">
+            <tr id="search-res" *ngFor = "let info of searches">
+                <td>UID : {{info.uid}}</td>
+                <td>Name : {{info.name}}</td>
+                <td> Subject : {{info.subject}}</td>
+                <td><button class="btn" style="margin: 0;" (click) = "selected(info.uid)">See Availability</button></td>
+            </tr>
+            
+        </table>
+        
+    </div>
+    <div id="result" *ngIf="show">
+        <div>
+            <h6 style="margin-top: 25px; font-size: 20px;">Showing the Availability of the Faculty : </h6>
+            <div>
+                <div class="info m-5">
+                    <div>Faculty : {{facultyUpdate.name}}</div>
+                    <div>UID : {{facultyUpdate.uid}}</div>
+                    <div>Subject Code : {{facultyUpdate.subject}}</div>
+                </div>
+                <div>
+                    <p class="m-5">Available Time (Free time)</p>
+                    <table class="table m-5">
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.monday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.tuesday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.wednesday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.thursday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.friday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.saturday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info m-5">
+                    <div>
+                        Room : {{facultyUpdate.room}}
+                    </div>
+                    <div>
+                        Cabin Number : {{facultyUpdate.cabinNo}}
+                    </div>
+                    
+                </div>
+                <div id="live">
+                    <div>
+                        <button class="btn">Contact through LPU Live</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+
+<div id="main-box">
+    <div id="dropdown">
+        <div id="list">
+            <div id="depart-name">
+                <select name="depart" id="depart" #depart (change)="getDep(depart.value)">
+                    <option value="">Select the Department Name</option>
+                    <option *ngFor="let val of values" value="{{val.courseId}}">{{val.subject}}</option>
+
+                </select>
+            </div>
+            <div id="course-name">
+                <select name="course" id="course" #course (change)="getCourse(course.value)">
+                    <option value="">Select the Course Name</option>
+                    <option *ngFor="let course of showCourses" value="{{course.id}}">{{course.name}}</option>
+                </select>
+            </div>
+            <div id="teacher-name">
+                <select name="teacher" id="teacher" #teacher (change)="getFaculty(teacher.value)">
+                    <option value="">Select the Teacher Name</option>
+                    <option *ngFor="let teacher of showFacultyObj" value="{{teacher.uid}}">{{teacher.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div id="btn">
+            <button (click)="showresult()">Show Availability</button>
+        </div>
+    </div>
+    <div id="result" *ngIf="show">
+        <div>
+            <h6 style="margin-top: 25px; font-size: 20px;">Showing the Availability of the Faculty : </h6>
+            <div>
+                <div class="info m-5">
+                    <div>Faculty : {{facultyUpdate.name}}</div>
+                    <div>UID : {{facultyUpdate.uid}}</div>
+                    <div>Subject Code : {{facultyUpdate.subject}}</div>
+                </div>
+                <div>
+                    <p class="m-5">Available Time (Free time)</p>
+                    <table class="table m-5">
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.monday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.tuesday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.wednesday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.thursday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.friday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                            <td>
+                                <div *ngFor="let time of facultyUpdate.freeTime.saturday" id="free">
+                                    {{time}}<br>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="info m-5">
+                    <div>
+                        Room : {{facultyUpdate.room}}
+                    </div>
+                    <div>
+                        Cabin Number : {{facultyUpdate.cabinNo}}
+                    </div>
+                    
+                </div>
+                <div id="live">
+                    <div>
+                        <button class="btn">Contact through LPU Live</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

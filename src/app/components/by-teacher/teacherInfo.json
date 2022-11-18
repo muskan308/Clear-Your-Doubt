@@ -1,0 +1,77 @@
+[
+    {
+        "uid" : "11345",
+        "name" : "Ms. Neha Sharma",
+        "subject" : "INT219",
+        "freeTime" : {
+            "monday" : ["1 PM - 2 PM","3 PM - 4 PM"],
+            "tuesday" : ["10 AM - 11 AM", "4 PM - 5 PM"],
+            "wednesday" : ["12 PM - 1 PM"],
+            "thursday" : ["12 PM - 1 PM", "1 PM - 2 PM"],
+            "friday" : ["3 PM - 4 PM", "4 PM - 5 PM"],
+            "saturday" : ["11 AM - 12 AM", "1 PM - 2 PM"]
+        },
+        "room" : "34 - 204",
+        "cabinNo" : "21"
+    },
+    {
+        "uid" : "12345",
+        "name" : "Mr. Manpreet Singh",
+        "subject" : "INT219",
+        "freeTime" : {
+            "monday" : ["4 PM - 5 PM"],
+            "tuesday" : ["10 AM - 11 AM", "4 PM - 5 PM"],
+            "wednesday" : ["2 PM - 3 PM","3 PM - 4 PM"],
+            "thursday" : ["12 PM - 1 PM", "1 PM - 2 PM"],
+            "friday" : ["3 PM - 4 PM", "4 PM - 5 PM"],
+            "saturday" : ["11 AM - 12 AM", "3 PM - 4 PM"]
+        },
+        "room" : "34 - 204",
+        "cabinNo" : "22"
+    },
+    {
+        "uid" : "13145",
+        "name" : "Dr. Pragya Mehra",
+        "subject" : "INT219",
+        "freeTime" : {
+            "monday" : ["4 PM - 5 PM"],
+            "tuesday" : ["10 AM - 11 AM", "4 PM - 5 PM"],
+            "wednesday" : ["2 PM - 3 PM","3 PM - 4 PM"],
+            "thursday" : ["12 PM - 1 PM", "1 PM - 2 PM"],
+            "friday" : ["3 PM - 4 PM", "4 PM - 5 PM"],
+            "saturday" : ["11 AM - 12 AM", "3 PM - 4 PM"]
+        },
+        "room" : "34 - 204",
+        "cabinNo" : "23"
+    },
+    {
+        "uid" : "14521",
+        "name" : "Dr. Majot Kaur",
+        "subject" : "INT219",
+        "freeTime" : {
+            "monday" : ["4 PM - 5 PM"],
+            "tuesday" : ["10 AM - 11 AM", "4 PM - 5 PM"],
+            "wednesday" : ["1 PM -  PM","3 PM - 4 PM"],
+            "thursday" : ["12 PM - 1 PM", "1 PM - 2 PM"],
+            "friday" : ["3 PM - 4 PM", "4 PM - 5 PM"],
+            "saturday" : ["11 AM - 12 AM", "3 PM - 4 PM"]
+        },
+        "room" : "34 - 204",
+        "cabinNo" : "25"
+    },
+    {
+        "uid" : "19345",
+        "name" : "Dr. Neha Chopra",
+        "subject" : "CSE332",
+        "freeTime" : {
+            "monday" : ["1 PM - 2 PM","3 PM - 4 PM"],
+            "tuesday" : ["10 AM - 11 AM", "4 PM - 5 PM"],
+            "wednesday" : ["12 PM - 1 PM"],
+            "thursday" : ["12 PM - 1 PM", "1 PM - 2 PM"],
+            "friday" : ["3 PM - 4 PM", "4 PM - 5 PM"],
+            "saturday" : ["11 AM - 12 AM", "1 PM - 2 PM"]
+        },
+        "room" : "34 - 204",
+        "cabinNo" : "21"
+    }
+]
