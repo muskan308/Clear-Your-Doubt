@@ -1,4 +1,4 @@
-# teacherfinder
+# Clear Your Doubts
 
 ##Prerequisite
 
